@@ -26,18 +26,19 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div
+  <RouterLink
+    :to="'/movie/' + props.movieId"
     v-if="state.movieData"
-    class="flex flex-row w-1/3 items-center justify-between font-color-secondary p-3 my-3 rounded-xl shadow-md bg-primary bg-opacity-40 text-gray-200"
+    class="flex flex-row w-1/4 items-center justify-between font-color-secondary p-3 my-3 rounded-xl shadow-md bg-primary bg-opacity-70 text-gray-200"
   >
     <div class="flex flex-col pl-8">
-      <h2 class="font-bold">{{ state.movieData.Title }}</h2>
+      <h2 class="font-bold text-xl">{{ state.movieData.Title }}</h2>
       <p>{{ state.movieData.Genre }}</p>
     </div>
     <img
       :src="state.movieData.Poster"
       alt="Movie Poster"
-      class="w-auto h-40 max-w-80"
+      class="w-auto max-h-40 rounded-lg"
     />
-  </div>
+  </RouterLink>
 </template>

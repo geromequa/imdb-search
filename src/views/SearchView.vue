@@ -41,11 +41,12 @@ const handleInput = async () => {
 <template>
   <div>
     <div class="flex flex-col w-full items-center justify-center pt-10">
+      <h1 class="text-4xl font-bold text-white pb-3">IMDb Movie Search</h1>
       <input
         type="text"
         v-model="state.searchString"
         placeholder="Search for a Movie"
-        class="w-1/3 p-2 rounded-xl shadow-md bg-secondary opacity-40 text-gray-200 placeholder-gray-200"
+        class="w-1/3 p-2 rounded-xl shadow-md bg-secondary bg-opacity-40 text-xl text-white placeholder-gray-200"
       />
       <div v-if="state.isLoading">
         <PulseLoader />

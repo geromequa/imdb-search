@@ -14,7 +14,7 @@ const router = createRouter({
       path: "/movie/:id",
       name: "movie-details",
       component: MovieView,
-      props: (route) => ({ id: route.params.id }),
+      props: true,
     },
   ],
 });
