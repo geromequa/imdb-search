@@ -49,7 +49,7 @@ const handleInput = async () => {
         class="w-1/3 p-2 rounded-xl shadow-md bg-secondary bg-opacity-40 text-xl text-white placeholder-gray-200"
       />
       <div v-if="state.isLoading">
-        <PulseLoader />
+        <PulseLoader color="gray" class="pt-2" />
       </div>
       <div v-else class="flex flex-col w-full items-center pt-10">
         <MovieListing
